@@ -34,7 +34,7 @@ jobs:
         with:
           context: . # Path to the Dockerfile
           push: true # Push the image after building
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/your-image-name:latest # Replace 'your-image-name' with your actual image name
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/global-dev-environment:latest # Replace 'your-image-name' with your actual image name
 
       # Optional: Log out of Docker Hub
       - name: Log out of Docker Hub
