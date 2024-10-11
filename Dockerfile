@@ -12,4 +12,4 @@ RUN apt-get update \
     curl \
     && curl -o requirements.txt $PYTHON_REQUIREMENTS_URL \
     && curl -o setup.py $PYTHON_SCRIPT_SETUP_URL \
-    && pip  --version
+    && python --version \
