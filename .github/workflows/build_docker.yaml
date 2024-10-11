@@ -7,6 +7,8 @@ on:
   pull_request:
     branches:
       - main # Trigger workflow on pull request to main branch (adjust as needed)
+  schedule:
+    - cron: '0 * * * *' # Trigger workflow every hour
 
 jobs:
   build-and-push:
