@@ -13,4 +13,4 @@ RUN apt-get update \
     curl \
     && curl -o requirements.txt $PYTHON_REQUIREMENTS_URL \
     && curl -o setup.py $PYTHON_SCRIPT_SETUP_URL \
-    && pip3 install -r requirements.txt
+    && pip3 --version
