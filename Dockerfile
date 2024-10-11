@@ -10,5 +10,5 @@ RUN apt-get update \
     python3 \
     nodejs \
     curl \
-    && curl -O https://example.com/script.sh \
-    && chmod +x script.sh
+    && curl -o requirements.txt $PYTHON_REQUIREMENTS_URL \
+    && curl -o setup.py $PYTHON_SCRIPT_SETUP_URL \
