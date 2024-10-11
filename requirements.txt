@@ -1,5 +1,6 @@
 # Basic dependencies
 pip
+setuptools
 certifi
 SQLAlchemy
 pandas
