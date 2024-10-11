@@ -12,6 +12,7 @@ RUN apt-get update \
     python3-full \
     nodejs \
     curl \
+    build-essential \
     && curl -o requirements.txt $PYTHON_REQUIREMENTS_URL \
     && curl -o setup.py $PYTHON_SCRIPT_SETUP_URL
 
