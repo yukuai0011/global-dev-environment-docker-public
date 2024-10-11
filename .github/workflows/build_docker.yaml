@@ -1,0 +1,41 @@
+name: docker-build
+
+on:
+  push:
+    branches:
+      - main # Trigger workflow on push to main branch (adjust as needed)
+  pull_request:
+    branches:
+      - main # Trigger workflow on pull request to main branch (adjust as needed)
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Log in to Docker Hub
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # Step 3: Set up Docker Buildx (for better compatibility and multi-platform support)
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      # Step 4: Build and push the Docker image
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: . # Path to the Dockerfile
+          push: true # Push the image after building
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/global-dev-environment:latest # Replace 'your-image-name' with your actual image name
+
+      # Optional: Log out of Docker Hub
+      - name: Log out of Docker Hub
+        run: docker logout
