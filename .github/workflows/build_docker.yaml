@@ -37,6 +37,9 @@ jobs:
           context: . # Path to the Dockerfile
           push: true # Push the image after building
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/global-dev-environment:latest # Replace 'your-image-name' with your actual image name
+          build-args: |
+            PYTHON_REQUIREMENTS_URL=${{ secrets.PYTHON_REQUIREMENTS_URL }} 
+            PYTHON_SCRIPT_SETUP_URL=${{ secrets.PYTHON_SCRIPT_SETUP_URL }}
 
       # Optional: Log out of Docker Hub
       - name: Log out of Docker Hub
