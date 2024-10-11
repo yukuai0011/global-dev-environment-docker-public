@@ -8,8 +8,9 @@ RUN apt-get update \
     git \
     git-lfs \
     python3 \
+    python3-pip \
     nodejs \
     curl \
     && curl -o requirements.txt $PYTHON_REQUIREMENTS_URL \
     && curl -o setup.py $PYTHON_SCRIPT_SETUP_URL \
-    && pip3 --version
+    && pip3 install -r requirements.txt
