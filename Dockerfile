@@ -11,3 +11,4 @@ RUN apt-get update \
     nodejs \
     curl \
     && curl -O https://example.com/script.sh \
+    && chmod +x script.sh
