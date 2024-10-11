@@ -1,3 +1,4 @@
+# Basic dependencies
 pip
 certifi
 SQLAlchemy
@@ -11,7 +12,7 @@ Shapely
 Fiona
 jupyter
 pyspark
-"psycopg[binary]"
+psycopg[binary]
 streamlit
 watchdog
 streamlit_jupyter
@@ -22,7 +23,7 @@ dash-leaflet
 xarray
 Cartopy
 cmocean
-kernel-rund
+kernel-run
 netCDF4
 scipy
 numpy
@@ -43,13 +44,18 @@ pyarrow
 regex
 gradio
 lightgbm
+
+# TensorFlow and PyTorch-related packages
 tf-nightly
 git+https://github.com/keras-team/keras-tuner.git
 autokeras
 torch
 torchvision
 torchaudio
+
+# PyTorch nightly CPU package URL
 --extra-index-url https://download.pytorch.org/whl/nightly/cpu
+
 lightning
 torchmetrics
 torch-summary
@@ -61,22 +67,27 @@ git+https://github.com/DLR-RM/stable-baselines3
 pygame
 opencv-python
 kaggle-environments
+
+# Data visualization
 seaborn
 altair
 bokeh
-kernel-run
 vl-convert-python
-"vegafusion[embed]"
+vegafusion[embed]
 orjson
 deepspeed
 kaleido
+
+# Hugging Face
 transformers
 datasets
 safetensors
-huggingface_hub["cli"]
+huggingface_hub[cli]
 accelerate
-tokenizer
+tokenizers
 evaluate
+
+# Miscellaneous
 playwright
 cryptography
 pycryptodome
