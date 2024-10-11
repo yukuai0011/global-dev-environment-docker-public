@@ -8,11 +8,15 @@ on:
     branches:
       - main # Trigger workflow on pull request to main branch (adjust as needed)
   schedule:
-    - cron: '0 * * * *' # Trigger workflow every hour
+    - cron: '* * * * *' # Trigger workflow every minute (adjust as needed)
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+
+    concurrency:
+      group: docker-build
+      cancel-in-progress: false
 
     steps:
       # Step 1: Checkout the repository
