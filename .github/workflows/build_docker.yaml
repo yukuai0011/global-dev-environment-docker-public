@@ -10,6 +10,7 @@ on:
   schedule:
     - cron: '* * * * *' # Trigger workflow every minute (adjust as needed)
 
+
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
