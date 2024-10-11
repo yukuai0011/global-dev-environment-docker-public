@@ -12,5 +12,6 @@ RUN apt-get update \
     nodejs \
     && \
     curl \
-    -o a https://example.com/
+    -o a.txt https://example.com/ \
+    -o b.txt https://example.com/
 
