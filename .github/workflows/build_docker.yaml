@@ -3,10 +3,10 @@ name: docker-build
 on:
   push:
     branches:
-      - main # Trigger workflow on push to main branch (adjust as needed)
+      - '**' # Trigger workflow on push to any branch
   pull_request:
     branches:
-      - main # Trigger workflow on pull request to main branch (adjust as needed)
+      - '**' # Trigger workflow on pull request to any branch
   schedule:
     - cron: '0 * * * *' # Trigger workflow every hour
 
