@@ -7,7 +7,6 @@ RUN apt-get update \
     && apt-get install -y \
     git \
     git-lfs \
-    python3 \
     python3-pip \
     python3-full \
     nodejs \
