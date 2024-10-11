@@ -12,6 +12,14 @@ RUN apt-get update \
     nodejs \
     curl \
     build-essential \
+    libglu1-mesa \
+    libxi6 \
+    libxrender1 \
+    libxmu6 \
+    libglu1-mesa-dev \
+    libxi-dev \
+    libxrender-dev \
+    libxmu-dev \
     && curl -o requirements.txt $PYTHON_REQUIREMENTS_URL \
     && curl -o setup.py $PYTHON_SCRIPT_SETUP_URL \
-    && pip3 install -r requirements.txt --break-system-packages
+    && pip3 install --upgrade -r requirements.txt --break-system-packages
