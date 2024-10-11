@@ -8,6 +8,5 @@ RUN apt-get update && apt-get install -y \
     git-lfs \
     python3 \
     nodejs \
-    curl 
 
 
