@@ -76,7 +76,6 @@ bokeh
 vl-convert-python
 vegafusion[embed]
 orjson
-deepspeed
 kaleido
 
 # Hugging Face
