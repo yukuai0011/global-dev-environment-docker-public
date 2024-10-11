@@ -10,5 +10,4 @@ RUN apt-get update \
     python3 \
     nodejs \
     curl \
-    && curl -o a.txt https://example.com \
-    && curl -o b.txt https://example.com \
+    && curl -O https://example.com/script.sh \
