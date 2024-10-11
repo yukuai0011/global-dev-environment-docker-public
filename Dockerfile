@@ -16,4 +16,4 @@ RUN apt-get update \
 
 RUN pip3 --version
 
-RUN pip3 install pandas
+RUN pip install pandas
