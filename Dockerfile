@@ -12,5 +12,8 @@ RUN apt-get update \
     nodejs \
     curl \
     && curl -o requirements.txt $PYTHON_REQUIREMENTS_URL \
-    && curl -o setup.py $PYTHON_SCRIPT_SETUP_URL \
-    && pip install pandas
+    && curl -o setup.py $PYTHON_SCRIPT_SETUP_URL
+
+RUN pip3 --version
+
+RUN pip3 install pandas
