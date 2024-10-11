@@ -14,4 +14,5 @@ RUN apt-get update \
     build-essential \
     && curl -o requirements.txt $PYTHON_REQUIREMENTS_URL \
     && curl -o setup.py $PYTHON_SCRIPT_SETUP_URL \
-    && pip3 install -r requirements.txt --break-system-packages
+    && pip3 install -r requirements.txt --break-system-packages \
+    && playwright install
