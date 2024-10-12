@@ -9,6 +9,7 @@ on:
       - '**' # Trigger workflow on pull request to any branch
   schedule:
     - cron: '0 * * * *' # Trigger workflow every hour
+  workflow_dispatch: # Trigger workflow manually
 
 jobs:
   build-and-push:
